@@ -1,7 +1,7 @@
 import telebot
 import datetime
 from typing import List
-from parser import Parser
+from pars import Parser
 from config import socks5, token
 
 bot = telebot.TeleBot(token)
