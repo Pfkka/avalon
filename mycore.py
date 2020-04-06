@@ -58,7 +58,7 @@ def get_schedule(message, flag=False):
         else:
             time = users_groups[message.chat.id]["time"]
             for i in groups_schedule[group_value]:
-                if i[0] < time < i[1]:
+                if i[0] <= time <= i[1]:
                     bot.send_message(message.chat.id, view(groups_schedule[group_value][i], i))
                     return
             pars_schedule(message.text, group_value, message)
